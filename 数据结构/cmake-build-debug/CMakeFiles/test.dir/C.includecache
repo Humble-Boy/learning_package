@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fengwenrui/学习包/数据结构/main.c
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+
