@@ -1,3 +1,4 @@
 /Users/fengwenrui/学习包/数据结构/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/fengwenrui/学习包/数据结构/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/fengwenrui/学习包/数据结构/cmake-build-debug/CMakeFiles/test.dir
+/Users/fengwenrui/学习包/数据结构/cmake-build-debug/CMakeFiles/linkList.dir
+/Users/fengwenrui/学习包/数据结构/cmake-build-debug/CMakeFiles/array.dir

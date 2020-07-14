@@ -111,44 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named linkList
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+linkList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 linkList
+.PHONY : linkList
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+linkList/fast:
+	$(MAKE) -f CMakeFiles/linkList.dir/build.make CMakeFiles/linkList.dir/build
+.PHONY : linkList/fast
 
-main.o: main.c.o
+#=============================================================================
+# Target rules for targets named array
 
-.PHONY : main.o
+# Build rule for target.
+array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 array
+.PHONY : array
+
+# fast build rule for target.
+array/fast:
+	$(MAKE) -f CMakeFiles/array.dir/build.make CMakeFiles/array.dir/build
+.PHONY : array/fast
+
+单链表的操作.o: 单链表的操作.c.o
+
+.PHONY : 单链表的操作.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.c.o
-.PHONY : main.c.o
+单链表的操作.c.o:
+	$(MAKE) -f CMakeFiles/linkList.dir/build.make CMakeFiles/linkList.dir/单链表的操作.c.o
+.PHONY : 单链表的操作.c.o
 
-main.i: main.c.i
+单链表的操作.i: 单链表的操作.c.i
 
-.PHONY : main.i
+.PHONY : 单链表的操作.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.c.i
-.PHONY : main.c.i
+单链表的操作.c.i:
+	$(MAKE) -f CMakeFiles/linkList.dir/build.make CMakeFiles/linkList.dir/单链表的操作.c.i
+.PHONY : 单链表的操作.c.i
 
-main.s: main.c.s
+单链表的操作.s: 单链表的操作.c.s
 
-.PHONY : main.s
+.PHONY : 单链表的操作.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.c.s
-.PHONY : main.c.s
+单链表的操作.c.s:
+	$(MAKE) -f CMakeFiles/linkList.dir/build.make CMakeFiles/linkList.dir/单链表的操作.c.s
+.PHONY : 单链表的操作.c.s
+
+数组的操作.o: 数组的操作.c.o
+
+.PHONY : 数组的操作.o
+
+# target to build an object file
+数组的操作.c.o:
+	$(MAKE) -f CMakeFiles/array.dir/build.make CMakeFiles/array.dir/数组的操作.c.o
+.PHONY : 数组的操作.c.o
+
+数组的操作.i: 数组的操作.c.i
+
+.PHONY : 数组的操作.i
+
+# target to preprocess a source file
+数组的操作.c.i:
+	$(MAKE) -f CMakeFiles/array.dir/build.make CMakeFiles/array.dir/数组的操作.c.i
+.PHONY : 数组的操作.c.i
+
+数组的操作.s: 数组的操作.c.s
+
+.PHONY : 数组的操作.s
+
+# target to generate assembly for a file
+数组的操作.c.s:
+	$(MAKE) -f CMakeFiles/array.dir/build.make CMakeFiles/array.dir/数组的操作.c.s
+.PHONY : 数组的操作.c.s
 
 # Help Target
 help:
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... linkList"
+	@echo "... array"
+	@echo "... 单链表的操作.o"
+	@echo "... 单链表的操作.i"
+	@echo "... 单链表的操作.s"
+	@echo "... 数组的操作.o"
+	@echo "... 数组的操作.i"
+	@echo "... 数组的操作.s"
 .PHONY : help
 
 

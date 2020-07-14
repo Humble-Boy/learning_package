@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fengwenrui/学习包/数据结构/单链表的操作.c
+stdio.h
+-
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+
