@@ -49,3 +49,6 @@
 /Users/fengwenrui/学习包/c#Test/WebApplication/WebApplication/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
 /Users/fengwenrui/学习包/c#Test/WebApplication/WebApplication/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/fengwenrui/学习包/c#test/WebApplication/WebApplication/obj/Debug/netcoreapp3.1/WebApplication.csproj.CopyComplete
+/Users/fengwenrui/学习包/c#Test/WebApplication/WebApplication/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/fengwenrui/学习包/c#Test/WebApplication/WebApplication/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/Users/fengwenrui/学习包/c#Test/WebApplication/WebApplication/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll

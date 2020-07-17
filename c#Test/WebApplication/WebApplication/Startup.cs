@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+// using Microsoft.Extensions.Options;
 using MySql.Data.EntityFrameworkCore.Extensions;
 
 namespace WebApplication
@@ -25,8 +27,19 @@ namespace WebApplication
         //这是先被调用
         public void ConfigureServices(IServiceCollection services)
         {
-            Console.WriteLine( " ConfigureServices " );
-            // Console.WriteLine();
+            var db = new  BloggingContext(  );
+            var blog = new Blog (  123 , "ryan"  );
+            db.Blogs.Add(blog);
+            db.SaveChanges();
+
+            // var blogs = db.Blogs;
+            // Console.WriteLine( blogs );
+
+            // Console.WriteLine( _Configuration["MySqlConnectionString"] );
+            // services.AddDbContext<BloggingContext>(options =>
+            // {
+            //     options.UseMySQL(_Configuration["MySqlConnectionString"]);
+            // } );
         }
 
         //每个 Use 扩展方法将一个或多个中间件组件添加到请求管道
@@ -35,16 +48,12 @@ namespace WebApplication
         //后被调用
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Console.WriteLine(" Configure ");
-            // app.Run();
-            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             
             app.UseRouting();
-            // app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

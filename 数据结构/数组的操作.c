@@ -82,10 +82,46 @@ bool circleLeftMove(sqList *list , int  leftMoveUnit  ) {
     return true;
 }
 // 等长的 升序 数组
-bool findTheMedian(  sqList *fristList ,  sqList *secondList    ) {
- 
+int findmid3(int A[], int B[], int n)
+{
+    int start1 = 0, end1 = n - 1, m1, start2 = 0, end2 = n - 1, m2;
+    //分别表示序列A和B的首位数、末位数和中位数
 
+    while (start1 != end1 || start2 != end2)
+    {
+        m1 = (start1 + end1) / 2;
+        m2 = (start2 + end2) / 2;
+        if (A[m1] == B[m2])
+            return A[m1];   //满足条件 1)
 
+        if (A[m1] < B[m2]) // 满足条件 2)
+        {
+            if ((start1 + end1) % 2 == 0)  //若元素个数为奇数
+            {
+                start1 = m1;  //舍弃A中间点以前的部分且保留中间点
+                end2 = m2;  //舍弃B中间点以后的部分且保留中间点
+            }
+            else				//元素个数为偶数
+            {
+                start1 = m1 + 1;  //舍弃A中间点及中间点以前部分
+                end2 = m2;  //舍弃B中间点以后部分且保留中间点
+            }
+        }
+        else
+        {  //满足条件3)
+            if ((start2 + end2) % 2 == 0)   //若元素个数为奇数
+            {
+                end1 = m1;    //舍弃A中间点以后的部分且保留中间点
+                start2 = m2;    //舍弃B中间点以前的部分且保留中间点
+            }
+            else     //元素个数为偶数
+            {
+                end1 = m1;    //舍弃A中间点以后部分且保留中间点
+                start2 = m2 + 1;    //舍弃B中间点及中间点以前部分
+            }
+        }
+    }
+    return  A[start1] < B[start2] ? A[start1] : B[start2];
 }
 
 
